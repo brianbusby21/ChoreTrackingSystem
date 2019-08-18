@@ -22,22 +22,43 @@ namespace CTS_UserInterface
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
+
+        //private void EnableDisableBtnCurrentUser()
+        //{
+        //    btnSelectCurrentUser.IsEnabled = false;
+        //    if (cboCurrentUser.SelectedItem != null)
+        //    {
+        //        btnSelectCurrentUser.IsEnabled = true;
+        //    }
+        //}
 
         private void BtnSelectCurrentUser_Click(object sender, RoutedEventArgs e)
         {
-            var selectedUser = cboCurrentUser.Text;
+            
+            if (cboCurrentUser.SelectedIndex > -1)
+            {
+                
+                MainUserInterface mainUserInterface = new MainUserInterface(cboCurrentUser.Text);
 
-            MainUserInterface mainUserInterface = new MainUserInterface(selectedUser);
+                mainUserInterface.Show();
 
-            mainUserInterface.Show();
+                this.Close();
+               
+            }
 
-            this.Close();
+            MessageBox.Show("Please select a user from the dropdown menu or add a new user");
+   
         }
 
         private void BtnAddNewUser_Click(object sender, RoutedEventArgs e)
         {
+            CreateNewUser createNewUserWindow = new CreateNewUser();
+
+            createNewUserWindow.Show();
+
+            this.Close();
 
         }
     }
