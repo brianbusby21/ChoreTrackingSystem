@@ -22,7 +22,8 @@ namespace CTS_UserInterface
     {
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            PopulateSelectedUserComboBox();
         }
 
         //private void EnableDisableBtnCurrentUser()
@@ -59,6 +60,11 @@ namespace CTS_UserInterface
             createNewUserWindow.Show();
 
             this.Close();
+
+        }
+
+        private void PopulateSelectedUserComboBox()
+        {
 
         }
     }

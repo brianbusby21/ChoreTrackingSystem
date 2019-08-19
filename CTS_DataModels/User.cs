@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace CTS_DataModels
 {
+    [Serializable]
     class User
     {
-        private ChoreList _assignedChoreList;
+        private List<Chore> _assignedChoreList;
 
         public int Id { get; set; }
+
+        public string UserName { get; private set; }
 
         public string Name { get; set; }
 
@@ -18,17 +21,18 @@ namespace CTS_DataModels
 
         public string Role { get; set; }
 
-        public User(string name)
+        public User(string name, string userName)
         {
             this.Name = name;
-            _assignedChoreList = new ChoreList();
+            this.UserName = userName;
+            _assignedChoreList = new List<Chore>();
         }
 
         public void AssignChore(Chore newChore)
         {
             if (newChore != null)
             {
-                _assignedChoreList.AddChore(newChore);
+                _assignedChoreList.Add(newChore);
             }
         }
 
@@ -39,7 +43,16 @@ namespace CTS_DataModels
 
         public void UnassignChore(string choreName)
         {
-            _assignedChoreList.DeleteChore(choreName);
+            var choreToRemove = _assignedChoreList.SingleOrDefault(c => c.Name == choreName);
+            if (choreToRemove != null)
+            {
+                _assignedChoreList.Remove(choreToRemove);
+            }
+
+        }
+
+        public void Save()
+        {
 
         }
 
