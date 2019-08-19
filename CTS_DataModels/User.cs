@@ -11,19 +11,24 @@ namespace CTS_DataModels
     {
         private List<Chore> _assignedChoreList;
 
-        public int Id { get; set; }
+        public int Id { get; private set; }
 
         public string UserName { get; private set; }
 
-        public string Name { get; set; }
+        public string FirstName { get; set; }
 
-        public short Age { get; set; }
+        public string LastName { get; set; }
 
-        public string Role { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
-        public User(string name, string userName)
+        public short Age { get; private set; }
+
+        public string Role { get; private set; }
+
+        public User(string firstName, string lastName, string userName)
         {
-            this.Name = name;
+            this.FirstName = firstName;
+            this.LastName = lastName;
             this.UserName = userName;
             _assignedChoreList = new List<Chore>();
         }
@@ -51,10 +56,10 @@ namespace CTS_DataModels
 
         }
 
-        public void Save()
+        private int CalculateAge(DateTime dateOfBirth)
         {
 
+            return 0;
         }
-
     }
 }

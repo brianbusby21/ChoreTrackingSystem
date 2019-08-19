@@ -87,7 +87,7 @@ namespace CTS_DataModels
                 catch (Exception ex)
                 {
 
-                    throw new Exception(string.Format("{0} -Unable to open the file"));
+                    throw new Exception(string.Format("{0} -Unable to open the file", ex.Message));
                 }
             }
         }

@@ -23,5 +23,19 @@ namespace CTS_UserInterface
         {
             InitializeComponent();
         }
+
+        private void BtnSaveUser_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow startWindow = new MainWindow();
+
+            startWindow.Show();
+
+            this.Close();
+        }
     }
 }

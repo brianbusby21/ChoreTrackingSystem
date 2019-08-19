@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTS_UserInterface"
         mc:Ignorable="d"
-        Title="CreateNewUser" Height="450" Width="800">
+        Title="CTS - Add New User" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="24" Margin="272,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="24" Margin="272,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <TextBox x:Name="txtDateOfBirth" HorizontalAlignment="Left" Height="24" Margin="272,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <Label x:Name="lblFirstName" Content="First Name" HorizontalAlignment="Left" Margin="170,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,0.192" Height="27"/>
+        <Label x:Name="lblLastName" Content="Last Name" HorizontalAlignment="Left" Margin="171,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,0.192" Height="27"/>
+        <Label x:Name="lblDateOfBirth" Content="Date Of Birth&#xD;&#xA;(mm/dd/yyyy)" HorizontalAlignment="Left" Margin="171,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,0.192" Height="45"/>
+        <Button x:Name="btnSaveUser" Content="Save" HorizontalAlignment="Left" Margin="272,271,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.253,0.6" Height="21" Click="BtnSaveUser_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="379,271,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.253,0.6" Height="21" Click="BtnCancel_Click"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="24" Margin="272,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <Label x:Name="lblUserName" Content="User Name" HorizontalAlignment="Left" Margin="171,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,0.192" Height="27"/>
+
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTS_UserInterface"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Chore Tracking System" Height="450" Width="800">
     <Grid>
         <ComboBox x:Name="cboCurrentUser" Text="Select Current User" HorizontalAlignment="Left" Margin="307,155,0,0" VerticalAlignment="Top" Width="178" Height="22" IsEditable="True"/>
         <Button x:Name="btnSelectCurrentUser" Content="OK" HorizontalAlignment="Left" Margin="510,155,0,0" VerticalAlignment="Top" Width="75" Click="BtnSelectCurrentUser_Click"/>

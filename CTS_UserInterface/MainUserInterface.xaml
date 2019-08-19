@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTS_UserInterface"
         mc:Ignorable="d"
-        Title="MainUserInterface" Height="450" Width="800">
+        Title="CTS - User Interface" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="467*"/>
+        </Grid.ColumnDefinitions>
+
     </Grid>
 </Window>
