@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTS.Data", "CTS.Data\CTS.Data.csproj", "{72C0A891-010B-4090-8C2A-AD68B35329A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTSDesktop", "CTSDesktop\CTSDesktop.csproj", "{1BCF7567-E31E-4CAF-91C9-8AC093033AEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{72C0A891-010B-4090-8C2A-AD68B35329A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72C0A891-010B-4090-8C2A-AD68B35329A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72C0A891-010B-4090-8C2A-AD68B35329A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCF7567-E31E-4CAF-91C9-8AC093033AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCF7567-E31E-4CAF-91C9-8AC093033AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCF7567-E31E-4CAF-91C9-8AC093033AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCF7567-E31E-4CAF-91C9-8AC093033AEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

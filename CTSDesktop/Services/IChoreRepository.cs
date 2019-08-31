@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CTSDesktop.Services
 {
-    class IChoreRepository
+    public interface IChoreRepository
     {
     }
 }
