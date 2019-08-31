@@ -6,40 +6,39 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTS_DataModels
+namespace CTS.Data
 {
-    [Serializable]
-    class UserList
+    public class ChildList
     {
         private const string DATA_FILENAME = "UserList.dat";
-        private static UserList userList;
-        private Dictionary<string, User> _userDictionary;
+        private static ChildList childList;
+        private Dictionary<string, Child> _childDictionary;
         private BinaryFormatter formatter;
-        
-        public static UserList Instance()
+
+        public static ChildList Instance()
         {
-            if (userList == null)
+            if (childList == null)
             {
-                userList = new UserList();
+                childList = new ChildList();
             }
 
-            return userList;
+            return childList;
         }
 
-        private UserList()
+        private ChildList()
         {
-            this._userDictionary = new Dictionary<string, User>();
+            this._childDictionary = new Dictionary<string, Child>();
             this.formatter = new BinaryFormatter();
         }
 
-        public bool AddUser(User newUser)
+        public bool AddUser(Child newUser)
         {
-            if (this._userDictionary.ContainsKey(newUser.UserName))
+            if (this._childDictionary.ContainsKey(newUser.UserName))
             {
                 return false;
             }
 
-            this._userDictionary.Add(newUser.UserName, newUser);
+            this._childDictionary.Add(newUser.UserName, newUser);
             return true;
         }
 
@@ -50,14 +49,14 @@ namespace CTS_DataModels
 
         public bool DeleteUser(string userName)
         {
-            if (!this._userDictionary.ContainsKey(userName))
+            if (!this._childDictionary.ContainsKey(userName))
             {
                 return false;
             }
 
-            this._userDictionary.Remove(userName);
+            this._childDictionary.Remove(userName);
             return true;
-                     
+
         }
 
         public void SaveUserList()
@@ -65,12 +64,12 @@ namespace CTS_DataModels
             try
             {
                 FileStream fileStreamWriter = new FileStream(DATA_FILENAME, FileMode.Create, FileAccess.Write);
-                this.formatter.Serialize(fileStreamWriter, this._userDictionary);
+                this.formatter.Serialize(fileStreamWriter, this._childDictionary);
                 fileStreamWriter.Close();
             }
             catch (Exception ex)
             {
-                 throw new Exception(string.Format("{0} - Could not save the file", ex.Message));
+                throw new Exception(string.Format("{0} - Could not save the file", ex.Message));
             }
         }
 
@@ -81,7 +80,7 @@ namespace CTS_DataModels
                 try
                 {
                     FileStream fileStreamReader = new FileStream(DATA_FILENAME, FileMode.Open, FileAccess.Read);
-                    this._userDictionary = (Dictionary<string, User>)this.formatter.Deserialize(fileStreamReader);
+                    this._childDictionary = (Dictionary<string, Child>)this.formatter.Deserialize(fileStreamReader);
                     fileStreamReader.Close();
                 }
                 catch (Exception ex)
@@ -93,3 +92,4 @@ namespace CTS_DataModels
         }
     }
 }
+

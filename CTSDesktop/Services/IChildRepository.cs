@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTS_Console
+namespace CTSDesktop.Services
 {
-    class Program
+    class IChildRepository
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

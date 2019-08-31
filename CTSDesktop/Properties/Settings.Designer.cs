@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CTS_UserInterface.Properties
+namespace CTSDesktop.Properties
 {
 
 

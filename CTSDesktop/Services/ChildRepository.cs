@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CLS_AppLogic
+namespace CTSDesktop.Services
 {
-    public static class Common
+    public class ChildRepository
     {
-        public static void Save()
-        {
-
-        }
     }
 }

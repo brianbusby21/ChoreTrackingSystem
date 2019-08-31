@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace CTS_UserInterface
+namespace CTSDesktop
 {
     /// <summary>
     /// Interaction logic for App.xaml

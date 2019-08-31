@@ -10,32 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CTS_UserInterface
+namespace CTSDesktop.Chores
 {
     /// <summary>
-    /// Interaction logic for CreateNewUser.xaml
+    /// Interaction logic for ChoreView.xaml
     /// </summary>
-    public partial class CreateNewUser : Window
+    public partial class ChoreView : UserControl
     {
-        public CreateNewUser()
+        public ChoreView()
         {
             InitializeComponent();
-        }
-
-        private void BtnSaveUser_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnCancel_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow startWindow = new MainWindow();
-
-            startWindow.Show();
-
-            this.Close();
         }
     }
 }

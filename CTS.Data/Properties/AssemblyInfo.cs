@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CTS_DataModels")]
+[assembly: AssemblyTitle("CTS.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CTS_DataModels")]
+[assembly: AssemblyProduct("CTS.Data")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("72564bac-2ca3-49a2-988d-4fa42a12c7f0")]
+[assembly: Guid("72c0a891-010b-4090-8c2a-ad68b35329a3")]
 
 // Version information for an assembly consists of the following four values:
 //

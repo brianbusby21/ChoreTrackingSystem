@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTS_DataModels
+namespace CTS.Data
 {
-    class Chore
+    public class Chore
     {
         public int Id { get; set; }
 
@@ -18,6 +18,5 @@ namespace CTS_DataModels
         {
             this.Name = name;
         }
-
     }
 }

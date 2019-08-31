@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{616FDA9D-C2F5-446D-A0F0-47D09D557079}</ProjectGuid>
+    <ProjectGuid>{1BCF7567-E31E-4CAF-91C9-8AC093033AEE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CTS_UserInterface</RootNamespace>
-    <AssemblyName>CTS_UserInterface</AssemblyName>
+    <RootNamespace>CTSDesktop</RootNamespace>
+    <AssemblyName>CTSDesktop</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,17 +53,8 @@
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CreateNewUser.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainUserInterface.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StartWindow.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -71,14 +62,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CreateNewUser.xaml.cs">
-      <DependentUpon>CreateNewUser.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainUserInterface.xaml.cs">
-      <DependentUpon>MainUserInterface.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StartWindow.xaml.cs">
-      <DependentUpon>StartWindow.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -107,12 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CTS_DataModels\CTS_DataModels.csproj">
-      <Project>{72564bac-2ca3-49a2-988d-4fa42a12c7f0}</Project>
-      <Name>CTS_DataModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

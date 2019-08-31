@@ -10,20 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CTS_UserInterface
+namespace CTSDesktop.Users
 {
     /// <summary>
-    /// Interaction logic for MainUserInterface.xaml
+    /// Interaction logic for ChildListView.xaml
     /// </summary>
-    public partial class MainUserInterface : Window
+    public partial class ChildListView : UserControl
     {
-        private string _selectedUser;
-        public MainUserInterface(string user)
+        public ChildListView()
         {
             InitializeComponent();
-            this._selectedUser = user;
         }
     }
 }

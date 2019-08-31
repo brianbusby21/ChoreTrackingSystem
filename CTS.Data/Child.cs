@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTS_DataModels
+namespace CTS.Data
 {
-    [Serializable]
-    class User
+    public class Child
     {
         private List<Chore> _assignedChoreList;
 
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
 
         public string UserName { get; private set; }
 
@@ -19,13 +18,15 @@ namespace CTS_DataModels
 
         public string LastName { get; set; }
 
+        public string FullName { get { return FirstName + " " + LastName; } }
+
         public DateTime DateOfBirth { get; set; }
 
         public short Age { get; private set; }
 
         public string Role { get; private set; }
 
-        public User(string firstName, string lastName, string userName)
+        public Child(string firstName, string lastName, string userName)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
